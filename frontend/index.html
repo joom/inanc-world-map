@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Inanc World Map</title>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/leaflet/1.0.0-beta.2/leaflet.js"></script>
+	<script src="assets/cluster.js"></script>
+	<script src="assets/leaflet-sidebar.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Libre+Franklin:200;400&subset=latin-ext" rel="stylesheet">
+  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/leaflet/1.0.0-beta.2/leaflet.css" />
+	<link rel="stylesheet" href="assets/cluster.css" />
+  <link rel="stylesheet" href="assets/leaflet-sidebar.css" />
+	<link rel="stylesheet" href="assets/screen.css" />
+</head>
+<body>
+  <div id="sidebar" class="sidebar collapsed">
+    <div class="sidebar-tabs">
+      <ul role="tablist">
+        <li><a href="#home" role="tab"><i class="fa fa-globe"></i></a></li>
+        <li><a href="#search" role="tab"><i class="fa fa-search"></i></a></li>
+      </ul>
+      <ul role="tablist">
+        <li><a href="#source" role="tab"><i class="fa fa-code"></i></a></li>
+      </ul>
+    </div>
+    <div class="sidebar-content">
+      <div class="sidebar-pane" id="home">
+        <h1 class="sidebar-header">
+          Inanc World Map
+          <span class="sidebar-close"><i class="fa fa-caret-left"></i></span>
+        </h1>
+        <p>This is a map that shows the locations of Inanc alumni.</p>
+        <p>If you want to add your location to the map, you should run the necessary commands on "Inanc Mezun" Slack instance. If you are not registered, you can register <a href="http://inancmezun.herokuapp.com/">from here</a>.</p>
+      </div>
+      <div class="sidebar-pane" id="search">
+        <h1 class="sidebar-header">Search<span class="sidebar-close"><i class="fa fa-caret-left"></i></span></h1>
+        <input type="search" id="search-box" placeholder="Search by name">
+        <select id="year-box">
+          <option value="" selected>No specific year</option>
+        </select>
+
+        <ul id="search-results"></ul>
+      </div>
+      <div class="sidebar-pane" id="source">
+        <h1 class="sidebar-header">Source<span class="sidebar-close"><i class="fa fa-caret-left"></i></span></h1>
+        The code is open sourced on <a href="http://github.com/joom/">Github</a>.
+      </div>
+    </div>
+  </div>
+
+	<div id="map" class="sidebar-map"></div>
+	<script src="data.json"></script>
+	<script src="assets/map.js"></script>
+</body>
+</html>

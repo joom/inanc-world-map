@@ -1,0 +1,14 @@
+var data = [
+  {
+    "name": "Cumhur Korkut",
+    "year": 2013,
+    "lat": 41.5623209,
+    "lng" : -72.6506488
+  },
+  {
+    "name": "Bogac Kerem Goksel",
+    "year": 2013,
+    "lat" : 37.4418834,
+    "lng" : -122.1430195
+  }
+]
