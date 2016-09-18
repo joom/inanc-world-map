@@ -1,7 +1,7 @@
 /* jshint esnext: true */
 
-var slackInterface = require('slack_interface');
-var gmapsInterface = require('gmaps_interface');
+var slackInterface = require('./slack_interface');
+var gmapsInterface = require('./gmaps_interface');
 
 function buildInsertResponse(user_id, newAddress, response_url) {
   var userPromise = slackInterface.getUserInfo(user_id);

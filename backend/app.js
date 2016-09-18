@@ -1,8 +1,10 @@
 /* jshint esnext: true */
 
+require('dotenv').config();
+
 var express = require('express');
 var mongoskin = require('mongoskin');
-var slackInterface = require('slack_interface');
+var slackInterface = require('./slack_interface');
 
 var app = express();
 
@@ -60,3 +62,4 @@ app.get('/locations', function(req, res, next) {
   });
 });
 
+module.exports = app;

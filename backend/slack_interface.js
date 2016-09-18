@@ -1,7 +1,7 @@
 /* jshint esnext: true */
 
-var gmapsInterface = require('gmaps_interface');
-var responseBuilder = require('response_builder');
+var gmapsInterface = require('./gmaps_interface');
+var responseBuilder = require('./response_builder');
 
 function deleteRequest(req, res, next) {
   db.location.findOne({user_id: req.body.user_id}, function(err, found) {
@@ -84,7 +84,7 @@ function getUserInfo(user_id, callback) {
     request.get({
       url: process.env.SLACK_USER_INFO_URL,
       qs: {
-        token: process.env.SLACK_API_TOKEN,
+        token: process.env.SLACK_CLIENT_TOKEN,
         user: user_id
       }
     }).on('response', function(response) {

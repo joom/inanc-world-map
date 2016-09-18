@@ -23,5 +23,10 @@ function getLatLngFull(address, callback) {
 }
 
 function getStaticMapURL(lat, lng) {
-  return `${process.env.GMAPS_STATIC_URL}?center=${lat}, ${lng}&zoom=${process.env.GMAPS_ZOOM_LEVEL}&size=${process.env.GMAPS_MAP_SIZE}x${process.env.GMAPS_MAP_SIZE}&maptype=roadmap&key=${process.env.GMAPS_API_KEY}`;
+  var baseUrl = process.env.GMAPS_STATIC_URL;
+  var loc = "&center="  + lat + ", " + lng;
+  var zoom = "&zoom=" + process.env.GMAPS_ZOOM_LEVEL;
+  var size = "&size=" + process.env.GMAPS_MAP_SIZE + "x" + process.env.GMAPS_MAP_SIZE;
+  var apiKey = "&key=" + process.env.GMAPS_API_KEY;
+  return baseUrl + loc + zoom + size + apiKey;
 }
